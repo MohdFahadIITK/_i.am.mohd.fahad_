@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>HEllo World</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+        <a href="ktj/index.html" class="logo"><span>D_V@16</span></a>
+        <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </header>
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountain_behind">
+            <h2 id="text">Welcome</h2>
+            <a href="#sec" id="btn">Explore</a>
+            <img src="mountains_front.png" id="mountain_front">
+        </section>
+        <div class="sec" id="sec">
+            <h2><i class="fa fa-quote-left fa-2x fa-pull-left fa-border"></i>Don't think <br>   Just do it.</h2>
+            <p>
+                <br>   <br>
+                Well this is my first site and is going to be my Portfolio.<br><br>   <br>
+                I am an experimentalist, I try to learn the things by trial and error.
+                From childhood I always tried to do reverse engineering, but succeded in 0.1% .
+                And thats the main reason for me to land in Engineering. 
+                <br>I love to play with electronics try to build, fix and upgrade things. I did some of cool projects like Tesla Coil, clap lamp in my highschool.
+                Later I also practiced with Ardino. Overall i learnt a lot.
+                <br>
+                My interest is also in Coding. I am fond about thinking, discussing a good question, and then coding it. 
+                So far I joined Code-chef, Hackerrank and trying to practice problem from there.<br><br>
+                To know more about me jump to About page.
+                <br>If you want to look at my projects,experience and hobbies then go to work section.
+                <br>To follow me there is Contact page.
+            </p>
+        </div>
+        <script>
+            let stars= document.getElementById('stars');
+            let moon= document.getElementById('moon');
+            let mountains_behind= document.getElementById('mountains_behind');
+            let text=document.getElementById('text');
+            let btn=document.getElementById('btn');
+            let mountains_front= document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+            window.addEventListener('scroll',function(){
+                let value= window.scrollY;
+                stars.style.left=value*0.25 + 'px';
+                moon.style.top=value*1.05 + 'px';
+                mountain_behind.style.top= value*0.5 +'px';
+                mountain_front.style.top= value*0 +'px';
+                text.style.marginRight = value* 4 + 'px';
+                text.style.marginTop = value*1.5 + 'px';
+                btn.style.marginTop = value*1.5 + 'px';
+                header.style.top =value*0.5 +'px';
+
+            })
+        </script>
+    </body>
+</html>
